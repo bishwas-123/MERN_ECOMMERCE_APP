@@ -2,9 +2,15 @@ import {Menu, Container,Icon,Image} from 'semantic-ui-react';
 import Link from 'next/link';
 import Router,{useRouter} from 'next/router';
 import Nprogress from 'nprogress';
-function Header() {
-  const user=false;
+import { handleLogout } from '../../utils/auth';
+function Header({user}) {
+ 
   const router=useRouter();
+
+    const isAdminOrRoot=user && (user.role==='root' || user.role==='admin');
+  
+  
+
   function isActive(router){
     return router ===router.pathname;
   }
@@ -13,7 +19,7 @@ function Header() {
   Router.onRouteChangeError=()=>Nprogress.done();
   
   return (
-    <Menu fluid id="Menu" inverted>
+    <Menu stackable fluid id="Menu" inverted>
       <Container>
         <Link href='/'>
           <Menu.Item header>
@@ -22,7 +28,7 @@ function Header() {
                src="/static/logo.svg"
                style={{marginRight:'1em'}}
                />
-               React Reserve
+               Simple Ecommerce
           </Menu.Item>
         </Link>
         <Link href='/cart'>
@@ -34,7 +40,7 @@ function Header() {
                Cart
           </Menu.Item>
         </Link>
-        { user &&
+        { user && isAdminOrRoot &&
         <Link href='/create'>
           <Menu.Item header active={isActive('/create')}>
                <Icon 
@@ -55,7 +61,7 @@ function Header() {
           </Menu.Item>
         </Link>
         
-          <Menu.Item header>
+          <Menu.Item header onClick={handleLogout}>
                <Icon 
                 name="sign out"
                 size="large"
