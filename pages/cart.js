@@ -4,13 +4,46 @@ import CartSummary from "../components/Cart/CartSummary";
 import { parseCookies } from "nookies";
 import axios from "axios";
 import baseUrl from "../utils/baseUrl";
+import cookie from 'js-cookie';
+import CatchErrors from '../utils/catchErrors';
 
-function Cart({ products }) {
- // console.log(products);
+function Cart({ products,user }) {
+  const [cartProducts,setCartProducts]=React.useState(products);
+  const[success,setSuccess]=React.useState(false);
+  const[loading,setLoading]=React.useState(false);
+  async function handleCheckout(paymentdata){
+    try{
+      setLoading(true);
+      const url = `${baseUrl}/api/checkout`;
+      const token = cookie.get("token");
+      const payload = { paymentdata };
+      const headers = { headers: { Authorization: token } };
+      const response=await axios.post(url, payload, headers);
+      setSuccess(true);
+    }
+    catch(error){
+      CatchErrors(error,window.alert);
+    }
+    finally{
+      setLoading(false);
+
+    }
+
+  }
+  async function handleItemRemoveFromCart(productId){
+    const url=`${baseUrl}/api/cart`;
+    const token=cookie.get('token');
+    const payload={
+      params:{productId},
+      headers:{Authorization:token}
+    }
+    const response = await axios.delete(url,payload);
+    setCartProducts(response.data);
+  }
   return (
-    <Segment>
-      <CartItemList />
-      <CartSummary />
+    <Segment loading={loading}>
+      <CartItemList success={success} handleItemRemoveFromCart={handleItemRemoveFromCart} user={user} products={cartProducts}/>
+      <CartSummary success={success} handleCheckout={handleCheckout} products={cartProducts}/>
     </Segment>
   );
 }

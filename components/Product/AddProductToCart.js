@@ -38,7 +38,7 @@ function AddProductToCart({ user, productId }) {
       setLoading(false);
     }
   }
-
+  
   return (
     <Input
       type="number"
