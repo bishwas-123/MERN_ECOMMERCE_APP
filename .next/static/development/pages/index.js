@@ -52435,13 +52435,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function Home(_ref) {
   var products = _ref.products;
-  //console.log(products);
   return __jsx(_components_Index_ProductList__WEBPACK_IMPORTED_MODULE_3__["default"], {
     products: products,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 6,
       columnNumber: 10
     }
   });
@@ -52453,7 +52452,6 @@ Home.getInitialProps = function _callee() {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          // fetch data on server
           url = "".concat(_utils_baseUrl__WEBPACK_IMPORTED_MODULE_4__["default"], "/api/products");
           _context.next = 3;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(url));

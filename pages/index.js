@@ -5,7 +5,6 @@ import BaseUrl from '../utils/baseUrl';
 function Home({ products }) {
   return <ProductList products={products}/>
 }
-
 Home.getInitialProps = async () => {
   const url = `${BaseUrl}/api/products`;
   const response = await axios.get(url);

@@ -169,27 +169,23 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Home({
   products
 }) {
-  //console.log(products);
   return __jsx(_components_Index_ProductList__WEBPACK_IMPORTED_MODULE_2__["default"], {
     products: products,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 6,
       columnNumber: 10
     }
   });
 }
 
 Home.getInitialProps = async () => {
-  // fetch data on server
   const url = `${_utils_baseUrl__WEBPACK_IMPORTED_MODULE_3__["default"]}/api/products`;
-  const response = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url); //console.log(response.data);
-
+  const response = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url);
   return {
     products: response.data
-  }; // return response data as an object
-  // note: this object will be merged with existing props
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
