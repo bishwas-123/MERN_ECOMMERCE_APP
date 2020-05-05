@@ -1,6 +1,6 @@
 {
   "name": "bishwas-practice-ecommerce",
-  "alias": "bishwas-practice-ecommerce.now.sh",
+  "alias": "https://bishwas-ecommerce.herokuapp.com",
   "version": 1,
   "env": {
     "MONGO_SRV": "mongodb+srv://bishwas:VBkMbImopGn64KF7@reactreseve-jr2q9.mongodb.net/test?retryWrites=true&w=majority",
