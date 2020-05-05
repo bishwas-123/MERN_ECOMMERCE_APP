@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "/Users/bishwas/Documents/workplace/SoftwareArchitecture/MERN_ECOMMERCE_APP/components/_App/HeadContent.js";
+    _jsxFileName = "/Users/bishwas/Documents/workplace/MERN_ECOMMERCE_APP/components/_App/HeadContent.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -213,7 +213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/auth */ "./utils/auth.js");
-var _jsxFileName = "/Users/bishwas/Documents/workplace/SoftwareArchitecture/MERN_ECOMMERCE_APP/components/_App/Header.js";
+var _jsxFileName = "/Users/bishwas/Documents/workplace/MERN_ECOMMERCE_APP/components/_App/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -460,7 +460,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./components/_App/Header.js");
 /* harmony import */ var _HeadContent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HeadContent */ "./components/_App/HeadContent.js");
-var _jsxFileName = "/Users/bishwas/Documents/workplace/SoftwareArchitecture/MERN_ECOMMERCE_APP/components/_App/Layout.js";
+var _jsxFileName = "/Users/bishwas/Documents/workplace/MERN_ECOMMERCE_APP/components/_App/Layout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -57269,7 +57269,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/bishwas/Documents/workplace/SoftwareArchitecture/MERN_ECOMMERCE_APP/pages/_app.js";
+var _jsxFileName = "/Users/bishwas/Documents/workplace/MERN_ECOMMERCE_APP/pages/_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 
@@ -57488,7 +57488,7 @@ var baseUrl = false ? undefined : 'http://localhost:3000';
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js&hotRouterUpdates=true!./");
-module.exports = __webpack_require__(/*! /Users/bishwas/Documents/workplace/SoftwareArchitecture/MERN_ECOMMERCE_APP/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
+module.exports = __webpack_require__(/*! /Users/bishwas/Documents/workplace/MERN_ECOMMERCE_APP/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
 
 
 /***/ }),

@@ -940,7 +940,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/bishwas/Documents/workplace/SoftwareArchitecture/MERN_ECOMMERCE_APP/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/bishwas/Documents/workplace/MERN_ECOMMERCE_APP/.next");
       return error;
     }
   };
