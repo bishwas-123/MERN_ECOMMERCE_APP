@@ -1,5 +1,6 @@
 import Product from '../../models/Product';
 import connectDb from '../../utils/connectDb';
+import Cart from '../../models/Cart';
 connectDb();
 export default async(req,res)=>{
     switch(req.method){
@@ -43,6 +44,17 @@ async function handleGetRequestForProduct(req,res){
 }
 async function handleDeleteRequestForProduct(req,res){
     const {_id}=req.query;
-    const product=await Product.findOneAndDelete({_id});
-    res.status(204).json({});
+    try{
+        const product=await Product.findOneAndDelete({_id});
+        await Cart.updateMany(
+            {"products.product":_id},
+            {$pull:{products:{product:_id}}}
+            )
+        res.status(204).json({});
+    }
+    catch(error){
+     console.error(error);
+     res.status(500).send('ERROR DELETING PRODUCTS');       
+    }
+ 
 }
